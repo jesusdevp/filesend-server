@@ -12,6 +12,9 @@ console.log("Comenzando File Send");
 // Puerto de la app
 const port = process.env.PORT || 4000;
 
+// Habilitar leer los valores de un body
+app.use(express.json());
+
 // Rutas de la app
 app.use("/api/usuarios", require("./routes/usuarios"));
 
