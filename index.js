@@ -1,7 +1,11 @@
 const express = require("express");
+const conectarDB = require("./config/db");
 
 // Crear el servidor
 const app = express();
+
+// COnectar a la base de datos
+conectarDB();
 
 console.log("Comenzando File Send");
 
