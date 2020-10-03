@@ -19,7 +19,7 @@ exports.nuevoEnlace = async (req, res, next) => {
 
   // Si el usuario esta autenticado
   if (req.usuario) {
-    const { passowrd, descargas } = req.body;
+    const { password, descargas } = req.body;
 
     // Asignar a enlace el numero de descargas
     if (descargas) {
