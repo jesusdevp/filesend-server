@@ -13,7 +13,7 @@ exports.subirArchivo = async (req, res, next) => {
           file.originalname.lastIndexOf("."),
           file.originalname.length
         );
-        cb(null, `${shortid.generate()}.${extension}`);
+        cb(null, `${shortid.generate()}${extension}`);
       },
     })),
   };
