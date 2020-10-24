@@ -9,6 +9,12 @@ const app = express();
 // COnectar a la base de datos
 conectarDB();
 
+// Habilitar Cors
+const opcionesCors = {
+  origin: process.env.FRONTEND_URL,
+};
+app.use(cors(opcionesCors));
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
 
@@ -26,12 +32,6 @@ app.use((req, res, next) => {
     res.send();
   });
 });
-
-// Habilitar Cors
-const opcionesCors = {
-  origin: process.env.FRONTEND_URL,
-};
-app.use(cors(opcionesCors));
 
 console.log("Comenzando File Send");
 
