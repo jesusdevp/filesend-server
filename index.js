@@ -48,7 +48,7 @@ app.use(express.static("uploads"));
 app.use("/api/usuarios", require("./routes/usuarios"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/enlaces", require("./routes/enlaces"));
-app.use("/api/archivos", require("./routes/archivos"));
+app.use("api/archivos", require("./routes/archivos"));
 
 // Arrancar la app
 app.listen(port, "0.0.0.0", () => {
